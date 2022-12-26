@@ -1,0 +1,6 @@
+secID,ticker,secShortName,cnSpell,exchangeCD,assetClass,listStatusCD,listDate,transCurrCD,ISIN,partyID,delistDate
+"000001.OFCN","000001","华夏成长","HXCZ","","F","UN","","CNY","",26812,""
+"000001.XIBE","000001","00国债01","00GZ01","XIBE","B","DE","2000-03-07","CNY","CND0000000S5",11327,"2007-02-14"
+"000001.XSHE","000001","平安银行","PAYH","XSHE","E","L","1991-04-03","CNY","CNE000000040",2,""
+"000001.ZICN","000001","上证综指","SZZZ","XSHG","IDX","L","1991-07-15","CNY","CNM000000019",17764,""
+"688001.XSHG","688001","华兴源创","HXYC","XSHG","E","L","2019-07-22","CNY","CNE100003MZ1",6017620,""
