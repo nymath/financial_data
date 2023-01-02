@@ -25,10 +25,9 @@ if __name__ == '__main__':
         test = rqdatac.index_components(f'{x}.XSHG', start_date = '20050101', end_date=current_time)
         keys = pd.to_datetime(list(test.keys()))
         date = pd.to_datetime(list(test.keys())).strftime('%Y%m%d').to_list()
-        res = dict(zip(date,test.values()))
-        with open(f'./data/index_components/{x}.XSHG.json', 'w') as f:
-            f.write(json.dumps(res))
-    print(f'successfully processed! The updated file is saved to {path_current}/data/index')      
+        res = pd.DataFrame(test.values(),index=pd.to_datetime(date))
+        res.to_csv(f'./data/index_components/{x}.csv')
+    print(f'successfully processed! The updated file is saved to {path_current}/data/index_components')      
 
 # with open('./data/index_components/test.pkl', 'rb') as f:
 #     ff = pickle.load(f)
