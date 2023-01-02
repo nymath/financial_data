@@ -20,13 +20,12 @@ if not os.path.exists('./data/index_components'):
 
 if __name__ == '__main__':
         
-    namespace = ['000300', '000016', '000905', '000906']
+    namespace = ['000300', '000016', '000905', '000906', '000852']
     for x in namespace:
         test = rqdatac.index_components(f'{x}.XSHG', start_date = '20050101', end_date=current_time)
         keys = pd.to_datetime(list(test.keys()))
-        date = pd.to_datetime(list(test.keys())).strftime('%Y%m%d').to_list()
-        res = pd.DataFrame(test.values(),index=pd.to_datetime(date))
-        res.to_csv(f'./data/index_components/{x}.XSHG.csv')
+        res = pd.DataFrame(test.values(),index=keys)
+        res.to_csv(f'./data/index_components/{x}.XSHG.csv',encoding='utf8')
     print(f'successfully processed! The updated file is saved to {path_current}/data/index_components')      
 
 # with open('./data/index_components/test.pkl', 'rb') as f:
