@@ -26,7 +26,7 @@ if __name__ == '__main__':
         keys = pd.to_datetime(list(test.keys()))
         date = pd.to_datetime(list(test.keys())).strftime('%Y%m%d').to_list()
         res = pd.DataFrame(test.values(),index=pd.to_datetime(date))
-        res.to_csv(f'./data/index_components/{x}.csv')
+        res.to_csv(f'./data/index_components/{x}.XSHG.csv')
     print(f'successfully processed! The updated file is saved to {path_current}/data/index_components')      
 
 # with open('./data/index_components/test.pkl', 'rb') as f:
